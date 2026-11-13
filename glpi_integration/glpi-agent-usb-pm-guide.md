@@ -45,7 +45,7 @@ Copy-Item -Path "$AgentPath\USB.pm" -Destination "$AgentPath\USB.pm.bak" -Force
 
 ### Step 2: Deploy the Customized `USB.pm` File
 
-Download [https://github.com/wjs67/LeitoraHU20/blob/main/glpi_integration/USB_update.pm USB_update.pm] into the GLPI Agent inventory task directory:
+Download raw file [USB_update](https://github.com/wjs67/LeitoraHU20/blob/main/glpi_integration/USB_update.pm) as `USB_pm` in the GLPI Agent inventory tasks directory:
 
 ```powershell
 Save to "C:\Program Files\GLPI-Agent\perl\agent\GLPI\Agent\Task\Inventory\Win32\USB.pm"
@@ -53,7 +53,7 @@ Save to "C:\Program Files\GLPI-Agent\perl\agent\GLPI\Agent\Task\Inventory\Win32\
 
 ### Step 3: Verify Registry Serial Number Storage
 
-Ensure that the target machine has its physical SecuGen HU20 serial number written to the Windows Registry. You can test and populate it via PowerShell:
+Ensure that the target machine has its physical SecuGen HU20 serial number written to the Windows Registry. You can test it via PowerShell:
 
 ```powershell
 # Confirm registry value
