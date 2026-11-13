@@ -45,10 +45,10 @@ Copy-Item -Path "$AgentPath\USB.pm" -Destination "$AgentPath\USB.pm.bak" -Force
 
 ### Step 2: Deploy the Customized `USB.pm` File
 
-Download the updated `USB_update.pm` into the GLPI Agent inventory task directory:
+Download [https://github.com/wjs67/LeitoraHU20/blob/main/glpi_integration/USB_update.pm USB_update.pm] into the GLPI Agent inventory task directory:
 
 ```powershell
-Save to "C:\Program Files\GLPI-Agent\perl\agent\GLPI\Agent\Task\Inventory\Win32"
+Save to "C:\Program Files\GLPI-Agent\perl\agent\GLPI\Agent\Task\Inventory\Win32\USB.pm"
 ```
 
 ### Step 3: Verify Registry Serial Number Storage
