@@ -43,5 +43,5 @@ Register-ScheduledTask -TaskName "GLPI_HU20_SerialUpdate" -Trigger $Trigger -Use
 
 ## 5. Change USB.pm
 
- Copy "C:\Program Files\GLPI-Agent\perl\agent\GLPI\Agent\Task\Inventory\Win32\USB.pm" to "C:\Program Files\GLPI-Agent\perl\agent\GLPI\Agent\Task\Inventory\Win32\USB.pm.old"
- Replace the **USB.pm** file with the file provided above.
+See `glpi-agent-usb-pm-guide.md`
+  
