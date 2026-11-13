@@ -18,7 +18,7 @@ Run the command below in PowerShell (as Administrator) to schedule automatic exe
 ```powershell
 $Trigger = New-ScheduledTaskTrigger -AtStartup
 $User    = "NT AUTHORITY\SYSTEM"
-$Action  = New-ScheduledTaskAction -Execute "PowerShell.exe" -Argument "-ExecutionPolicy Bypass -WindowStyle Hidden -File C:\Scripts\Update-HU20Serial.ps1"
+$Action  = New-ScheduledTaskAction -Execute "PowerShell.exe" -Argument "-ExecutionPolicy Bypass -WindowStyle Hidden -File C:\Program Files\LeitoraHU20\Update-HU20Serial.ps1"
 
 Register-ScheduledTask -TaskName "GLPI_HU20_SerialUpdate" -Trigger $Trigger -User $User -Action $Action -RunLevel Highest -Force
 ```
@@ -38,3 +38,10 @@ Register-ScheduledTask -TaskName "GLPI_HU20_SerialUpdate" -Trigger $Trigger -Use
 
 3. **Validation:**
    * In the next GLPI Agent inventory cycle, the value at `HKLM\SOFTWARE\CustomInventory\HU20\SerialNumber` (e.g., `H54200804821`) will be collected and displayed in the **Collection / Computer Information** tab of the asset in GLPI.
+
+---
+
+## 5. Change USB.pm
+
+ Copy "C:\Program Files\GLPI-Agent\perl\agent\GLPI\Agent\Task\Inventory\Win32\USB.pm" to "C:\Program Files\GLPI-Agent\perl\agent\GLPI\Agent\Task\Inventory\Win32\USB.pm.old"
+ Replace the **USB.pm** file with the file provided above.
