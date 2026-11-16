@@ -25,23 +25,7 @@ Register-ScheduledTask -TaskName "GLPI_HU20_SerialUpdate" -Trigger $Trigger -Use
 
 ---
 
-## 4. Configuration in GLPI Inventory (*Collect Definition*)
-
-1. **Enable Collect Module in the Agent:**
-   * In **Administration > GLPI Inventory > Agent Management**, ensure that the **Module - Collect** option is set to **Yes**.
-
-2. **Create the Collection Definition (*Collect Definition*):**
-   * **Type:** Windows Registry
-   * **Hive:** `HKEY_LOCAL_MACHINE`
-   * **Path:** `SOFTWARE\CustomInventory\HU20`
-   * **Key / Value:** `SerialNumber`
-
-3. **Validation:**
-   * In the next GLPI Agent inventory cycle, the value at `HKLM\SOFTWARE\CustomInventory\HU20\SerialNumber` (e.g., `H54200804821`) will be collected and displayed in the **Collection / Computer Information** tab of the asset in GLPI.
-
----
-
-## 5. Change USB.pm
+## 4. Change USB.pm
 
 See `glpi-agent-usb-pm-guide.md`
   
