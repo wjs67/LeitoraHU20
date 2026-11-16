@@ -23,7 +23,7 @@ Before deploying the custom module across target computers, ensure the following
 | Requirement | Details |
 | :--- | :--- |
 | **Operating System** | Microsoft Windows 10 / 11 / Server 2016+ (x64 or x86) |
-| **GLPI Agent Version** | GLPI Agent v1.0 or higher installed at `C:\Program Files\GLPI-Agent` |
+| **GLPI Agent Version** | GLPI Agent v1.8 or higher installed at `C:\Program Files\GLPI-Agent` |
 | **Permissions** | Administrator privileges (PowerShell / Command Prompt) |
 | **Registry Key** | Serial stored at `HKLM\SOFTWARE\CustomInventory\HU20\SerialNumber` |
 | **GLPI Server Dropdown** | Manufacturer `SecuGen` pre-created in GLPI Server dropdowns (recommended) |
