@@ -27,5 +27,5 @@ Register-ScheduledTask -TaskName "GLPI_HU20_SerialUpdate" -Trigger $Trigger -Use
 
 ## 4. Change USB.pm
 
-See `glpi-agent-usb-pm-guide.md`
+See [glpi-agent-usb-pm-guide.md(https://github.com/wjs67/LeitoraHU20/blob/main/glpi_integration/glpi-agent-usb-pm-guide.md)
   
