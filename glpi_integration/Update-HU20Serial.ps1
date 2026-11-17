@@ -41,6 +41,13 @@ try {
     # Validate if the serial number was extracted correctly
     if ([string]::IsNullOrWhiteSpace($SerialClean)) {
         Write-Warning "Unable to extract the serial number from the executable output."
+        
+        # Remove obsolete registry entry
+        if (Test-Path -Path $RegistryPath) {
+            Remove-ItemProperty -Path $RegistryPath -Name $ValueName -ErrorAction SilentlyContinue
+            Write-Host "Registry entry removed: $RegistryPath\$ValueName"
+        }
+        
         exit 1
     }
 
@@ -56,5 +63,12 @@ try {
 }
 catch {
     Write-Error "Error processing HU20 reader: $_"
+    
+    # Remove obsolete registry entry on any error
+    if (Test-Path -Path $RegistryPath) {
+        Remove-ItemProperty -Path $RegistryPath -Name $ValueName -ErrorAction SilentlyContinue
+        Write-Host "Registry entry removed due to error: $RegistryPath\$ValueName"
+    }
+    
     exit 1
 }
